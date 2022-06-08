@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Видео и аудио контент</h1>
+    <h2>Аудио</h2>
+    <p>Тег <code>&lt;audio&gt;</code> предназначен для вставки звука. Его основные атрибуты:</p>
+    <ul>
+        <li><code>controls</code> &mdash; пустой атрибут, при наличии которого отображается панель управления проигрывателем;</li>
+        <li><code>preload</code> &mdash;  задаёт режим предзагрузки аудио, имеет 3 возможных значения:</li>
+        <ul>
+            <li><code>none</code> &mdash; не загружать ничего;</li>
+            <li><code>metadata</code> &mdash; загрузить служебную мета-информацию;</li>
+            <li><code>auto</code> &mdash; можно загрузить весь файл.</li>
+        </ul>
+        <li><code>src</code> &mdash; задаёт адрес аудиофайла;</li>
+        <li><code>autoplay</code> &mdash;  пустой атрибут, при наличии которого воспроизведение звука начинается автоматически.</li>
+        </ul>
+        <p>Лучше указывать адреса файлов в нескольких форматах. Для этого используют теги <code>&lt;source&gt;</code>:</p>
+        <pre>
+<code>&lt;audio controls&gt;
+&lt;source src="sound.mp3" type="audio/mpeg"&gt;
+&lt;source src="sound.oga" type="audio/ogg"&gt;
+&lt;/audio&gt;</code>
+        </pre>
+        <div class="audio-class">
+            <audio controls>
+                <source src="../source/bunny-is-a-rider.mp3" type="audio/mp3">
+                </audio>
+        </div>
+</body>
+</html>
