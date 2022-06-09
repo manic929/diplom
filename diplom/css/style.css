@@ -159,3 +159,15 @@ pre {
     line-height: 1.6;
     border: 0;
 }
+/* button */
+.example button:hover {
+background-color:#6ce732;
+}
+/* red text */
+.red-text {
+    color: red;
+}
+/* black text */
+.black-text {
+    color: black;
+}

@@ -20,7 +20,7 @@
         </ul>
         <li><code>src</code> &mdash; задаёт адрес аудиофайла;</li>
         <li><code>autoplay</code> &mdash;  пустой атрибут, при наличии которого воспроизведение звука начинается автоматически.</li>
-        </ul>
+    </ul>
         <p>Лучше указывать адреса файлов в нескольких форматах. Для этого используют теги <code>&lt;source&gt;</code>:</p>
         <pre>
 <code>&lt;audio controls&gt;
@@ -32,6 +32,34 @@
             <audio controls>
                 <source src="../source/bunny-is-a-rider.mp3" type="audio/mp3">
                 </audio>
+        </div>
+        <h2>Видео</h2>
+        <p>Парный тег <code>&lt;video&gt;</code> предназначен для вставки видео. Его основные атрибуты:</p>
+        <ul>
+            <li><code>width</code> <code>height</code> &mdash; задают ширину и высоту видео;</li>
+            <li><code>controls</code> &mdash;  пустой атрибут, при наличии которого отображается панель управления видео;</li>
+            <li><code>preload</code> &mdash; задаёт режим предзагрузки видео, имеет 3 возможных значения:</li>
+            <ul>
+                <li><code>none</code> &mdash; не загружать ничего;</li>
+                <li><code>metadata</code> &mdash; загрузить служебную мета-информацию;</li>
+                <li><code>auto</code> &mdash; можно загрузить весь файл.</li>
+            </ul>
+            <li><code>src</code> &mdash; задаёт адрес видеофайла;</li>
+            <li><code>autoplay</code> &mdash;  пустой атрибут, при наличии которого воспроизведение видео начинается автоматически;</li>
+            <li><code>poster</code> &mdash; задаёт адрес картинки-обложки, которая отображается, когда видео ещё не загрузилось или не воспроизводится.</li>
+        </ul>
+        <p>Разные браузеры поддерживают разные форматы, поэтому лучше указывать адреса файлов в нескольких форматах. Делается это с помощью тегов code>&lt;source&gt;</code>:</p>
+        <pre>
+<code>&lt;video controls&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;source src="video.ogv" type="video/ogg"&gt;
+&lt;source src="video.webm" type="video/webm"&gt;
+&lt;/video&gt;</code>
+        </pre>
+        <div class="video-class">
+            <video controls width="640" height="360">
+                <source src="../source/glad-hes-gone.mp4" type="video/mp4">
+            </video>
         </div>
 </body>
 </html>
