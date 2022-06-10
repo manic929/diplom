@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Формы. Часть 3</h1>
+    <h2>Простая кнопка</h2>
+    <p>Самая простая кнопка создаётся с помощью тега <code>&lt;input&gt;</code> c типом <code>button</code></p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="button" value="Кнопка"&gt;</code></pre>
+    <h2>Сброс введенных значений</h2>
+    <p>В HTML-формах есть специальная кнопка, которая сбрасывает введённые значения и возвращает изначально установленные. Это поле ввода с типом <code>reset</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="reset" value="Кнопка"&gt;</code></pre>
+    <p>Кнопка возвращает те значения, которые были установлены в полях формы по умолчанию.</p>
+    <h2>Кнопка-изображение</h2>
+    <p>В качестве кнопки отправки формы можно использовать изображение. Для этого у тега <code>&lt;input&gt;</code> нужно указать тип <code>image</code>.</p>
+    <p>У кнопки-изображения есть еще два атрибута:</p>
+    <ul>
+        <li><code>src</code> задаёт адрес изображения;</li>
+        <li><code>alt</code> задаёт альтернативный текст, отображаемый в том случае, если изображение не загружено.</li>
+    </ul>
+    <p>Кнопка-изображение работает аналогично кнопке <code>submit</code>, но на сервер дополнительно передаются координаты точки, по которой был произведен щелчок.</p>
+    <h2>Альтернативный способ задания кнопок</h2>
+    <p>Помимо тега <code>&lt;input&gt;</code> для добавления кнопок можно использовать тег <code>&lt;button&gt;</code>. Внутри тега <code>&lt;button&gt;</code> можно размещать любые HTML-элементы, в том числе изображения. Например:</p>
+    <pre><code>&lt;button&gt;&lt;img src="calend.png" alt=""&gt;&lt;/button&gt;</code></pre>
+    <p>По умолчанию значение атрибута <code>type</code> у тега <code>&lt;button&gt;</code> — <code>submit</code>.</p>
+    <p>Значениями атрибута <code>type</code> также могут быть <code>button</code> и <code>reset</code>.</p>
+    <h2>Обязательное поле</h2>
+    <p>Чтобы указать, что поле обязательно для заполнения, нужно добавить ему пустой атрибут <code>required</code>:</p>
+    <pre><code>&lt;input type="text" required&gt;</code></pre>
+    <p>При попытке отправить форму с незаполненными обязательными полями браузер выведет всплывающее предупреждение. Эта проверка работает на клиентской части и упрощает валидацию форм. Но всегда нужно проверять отправленные данные и на стороне сервера.</p>
+    <h2>Поле выбора даты и времени</h2>
+    <p>Для выбора даты из календаря существует новый тип поля ввода — <code>date</code>. При клике на данное поле в форме всплывает календарик.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="date"&gt;</code></pre>
+    <form>
+        <input type="date">
+    </form>
+    <p>Для указания времени существуют дополнительные «временные» типы полей, например,<code>time</code>для выбора времени.</p>
+    <pre><code>&lt;input type="time"&gt;</code></pre>
+    <form>
+        <input type="time">
+    </form>
+    <p>Также существуют следующие типы полей:</p>
+    <ul>
+        <li><code>datetime-local</code> задаёт дату с указанием времени (без учета временной зоны);</li>
+        <li><code>week</code> задаёт порядковый номер недели в году и года;</li>
+        <li><code>month</code> задаёт месяц и год.</li>
+    </ul>
+    <h2>Список возможных значений</h2>
+    <p>Для текстовых полей можно заранее определить список возможных значений, которые отображаются, когда вы начинаете вводить текст в поле. Для этого существует специальный тег <code>&lt;datalist&gt;</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="text" list="browsers" name="browser"&gt;
+&lt;datalist id="browsers"&gt;
+ &lt;option value="Firefox"&gt;&lt;/option&gt;
+ &lt;option value="Chrome"&gt;&lt;/option&gt;
+ &lt;option value="Safari"&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+    <form>
+        <input type="text" list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Firefox"></option>
+  <option value="Chrome"></option>
+  <option value="Safari"></option>
+</datalist>
+    </form>
+    <h2>Поле ввода числового значения</h2>
+    <p>Для ввода числовых значений существует специальный тип поля ввода <code>number</code>. Рядом с полем браузер автоматически подставляет две стрелочки для увеличения и уменьшения числового значения.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="number"&gt;</code></pre>
+    <form>
+        <input type="number">
+    </form>
+    <p>Верхняя и нижняя границы числовых значений задаются при помощи вспомогательных атрибутов <code>min</code> и <code>max</code>. А атрибут <code>step</code> устанавливает величину шага изменения значения.</p>
+    <h2>Поле поиска</h2>
+    <p>Поле поиска задаётся при помощи тега <code>&lt;input&gt;</code> с типом <code>search</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="search"&gt;</code></pre>
+    <form>
+        <input type="search">
+    </form>
+    <h2>Автофокус</h2>
+    <p>Для того, чтобы отметить поле, в которое по умолчанию нужно установить курсор используется пустой атрибут <code>autofocus</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="text" autofocus&gt;</code></pre>
+    <p>Такой атрибут должен быть только один на странице.</p>
+    <h2>Выбор из диапазона</h2>
+    <p>Для выбора значения из диапазона подходит тип поля <code>range</code>.</p>
+    <p>Такое поле выглядит как шкала с ползунком и позволяет выбрать число из некоторого интервала значений.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="range"  min="1" max="10"&gt;</code></pre>
+    <form>
+        <input type="range" min="1" max="10">
+    </form>
+    <p>Атрибуты <code>min</code> и <code>max</code> устанавливают нижнюю и верхнюю границу допустимых значений, а атрибут <code>step</code> устанавливает величину шага изменения значения.</p>
+    <h2>Область для вывода результата</h2>
+    <p>Тег <code>&lt;output&gt;</code> представляет собой область, куда выводятся какие-либо результаты вычислений, обычно полученные при помощи JavaScript.</p>
+    <pre><code>&lt;output name="sum"&gt;[значение по умолчанию]&lt;/output&gt;</code></pre>
+    <h2>Группировка полей формы</h2>
+    <p>Для того, чтобы зрительно отделить одни поля от других используется <code>&lt;fieldset&gt;</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;fieldset&gt;
+ &lt;input type="text"&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+ &lt;input type="button" value="Кнопка"&gt;
+&lt;/fieldset&gt;</code></pre>
+    <form>
+        <fieldset>
+            <input type="text">
+          </fieldset>
+          <fieldset>
+            <input type="button" value="Кнопка">
+          </fieldset>
+    </form>
+    <p>Для каждой группы можно добавить её заголовок. Для этого внутрь тега <code>&lt;fieldset&gt;</code> надо поместить тег <code>&lt;legend&gt;</code>:</p>
+    <pre><code>&lt;fieldset&gt;
+ &lt;legend&gt;Заголовок группы&lt;/legend&gt;
+ &lt;input type="text"&gt;
+&lt;/fieldset&gt;</code></pre>
+        <form>
+            <fieldset>
+                <legend>Заголовок группы</legend>
+                <input type="text">
+              </fieldset>
+        </form>
+    <h2>Паттерны значений полей</h2>
+    <p>Для создания поля, принимающего данные определённого формата, используется атрибут <code>pattern</code>, в котором с помощью регулярного выражения описывается требуемый формат.</p>
+    <h2>Поле ввода телефона</h2>
+    <p>За ввод телефонных номеров отвечает тип поля <code>tel</code>. В такое поле полезно добавлять атрибут <code>pattern</code>, чтобы избежать ошибки при вводе данных.</p>
+    <h2>Подсказка при заполнении полей</h2>
+    <p>Для добавления подсказки к полю формы используется специальный атрибут <code>placeholder</code>:</p>
+    <pre><code>&lt;input type="text" placeholder="Текст подсказки"&gt;</code></pre>
+    <form>
+        <input type="text" placeholder="Текст подсказки">
+    </form>
+    <h2>Поля ввода адресов сайтов и email</h2>
+    <p>В HTML5 добавлены два типа полей <code>email</code> и <code>url</code>, предназначенные для ввода электронной почты и адреса сайта. Эти поля автоматически проверяют формат введённых данных.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="email"&gt;
+&lt;input type="url"&gt;</code></pre>
+    <h2>Поле выбора цвета</h2>
+    <p>В HTML5 добавили новый тип <code>color</code>, предназначенный для полей выбора цвета. При клике на такое поле появляется окно с возможностью выбрать цвет из палитры.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="color"&gt;</code></pre>
+    <form>
+        <input type="color">
+    </form>
+    <h2>Группировка элементов списка</h2>
+    <p>В теге <code>&lt;select&gt;</code> можно объединять <code>&lt;option&gt;</code> в группы.</p>
+    <p>Для формирования группы используется тег <code>&lt;optgroup&gt;</code>. Атрибут <code>&lt;label&gt;</code> этого тега определяет заголовок группы.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;select name="variants"&gt;
+&lt;optgroup label="Группа вариантов 1"&gt;
+ &lt;option value="1"&gt;Вариант 1&lt;/option&gt;
+ &lt;option value="2"&gt;Вариант 2&lt;/option&gt;
+ &lt;option value="3"&gt;Вариант 3&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Группа вариантов 2"&gt;
+ &lt;option value="4"&gt;Вариант 4&lt;/option&gt;
+ &lt;option value="5"&gt;Вариант 5&lt;/option&gt;
+ &lt;option value="6"&gt;Вариант 6&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+    <form>
+        <select name="variants">
+            <optgroup label="Группа вариантов 1">
+              <option value="1">Вариант 1</option>
+              <option value="2">Вариант 2</option>
+              <option value="3">Вариант 3</option>
+            </optgroup>
+            <optgroup label="Группа вариантов 2">
+              <option value="4">Вариант 4</option>
+              <option value="5">Вариант 5</option>
+              <option value="6">Вариант 6</option>
+            </optgroup>
+          </select>          
+    </form>
+    <h2>Запрет редактирования полей</h2>
+    <p>Для того, чтобы сделать поле недоступным для редактирования есть два способа: использование атрибута <code>readonly</code> и использование атрибута <code>disabled</code></p>
+    <p>Атрибут <code>readonly</code> не дает пользователю изменять поле (вводить новый текст, модифицировать существующий). Введенное значение можно выделить и скопировать. Данные из этого поля отправляются на сервер.</p>
+    <p>Атрибут <code>disabled</code> не дает пользователю изменять поле (вводить новый текст, модифицировать существующий). Нельзя поставить фокус в это поле, введенное значение нельзя выделять и копировать. Данные из этого поля НЕ отправляются на сервер.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;label&gt;ID&lt;/label&gt;
+&lt;input type="text" value="12345" disabled&gt;
+&lt;label&gt;Ссылка на профиль&lt;/label&gt;
+&lt;input type="url" value="vk.com/user12345" readonly&gt;</code></pre>
+    <form>
+        <label>ID</label>
+        <input type="text" value="12345" disabled>
+        <label>Ссылка на профиль</label>
+        <input type="url" value="vk.com/user12345" readonly>
+    </form>
+    <h2>Управление автозаполнением полей</h2>
+    <p>Параметрами автозаполнения можно управлять используя атрибут <code>autocomplete</code>. Он может принимать два значения <code>on</code> и <code>off</code>. Первое включает автозаполнение, второе — отключает.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="text" autocomplete="off"&gt;</code></pre>
+    <h2>Переключение между полями</h2>
+    <p>При нажатии клавиши Tab браузер передает управление (фокус) от одного элемента к другому в том порядке, в котором они были объявлены на странице. Этим порядком можно управлять при помощи атрибута <code>tabindex</code>.</p>
+    <p>Пример:</p>
+    <pre><code>&lt;input type="text" tabindex="3"&gt;</code></pre>
+    <p>В качестве значения может использоваться любое целое положительное число. Значения выстраиваются последовательно и переход между элементами происходит от меньшего значения к большему. Если представлено отрицательное значение — элемент может быть выделен, однако не участвует в последовательной навигации.</p>
+    <p>Если представлен 0 — элемент может быть выделен и достигнут с помощью последовательной навигации, однако порядок навигации определён платформой.</p>
+</body>
+</html>

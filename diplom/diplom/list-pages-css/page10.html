@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Фоны</h1>
+    <h2>Свойство background-color</h2>
+    <p>Цвет фона можно задать с помощью CSS-свойства <code>background-color</code>.</p>
+    <p>Цвета в CSS можно задавать в разных форматах: в шестнадцатеричном (или HEX), в RGB или RGBA, а также с помощью цветовых констант, таких как red или green.</p>
+    <pre>
+<code>selector {
+background-color: #ff0000;
+}</code>
+    </pre>
+    <h2>Свойство background-image</h2>
+    <p>Фоновое изображение можно задать с помощью CSS-свойства <code>background-image</code>. Адрес картинки обязательно заключается внутрь <code>url("...")</code>. Например:</p>
+    <pre>
+<code>selector {
+background-image: url("адрес-картинки");
+}</code>
+    </pre>
+    <p>Элементу можно одновременно задавать и цвет фона, и фоновую картинку. В этом случае картинка будет отображаться поверх фонового цвета.</p>
+    <h2>Свойство background-repeat</h2>
+    <p>По умолчанию фоновое изображение повторяется. Управлять этим поведением можно с помощью CSS-свойства <code>background-repeat</code>. У свойства 4 значения:</p>
+    <ul>
+        <li><code>repeat</code> &mdash; повторять во всех направлениях. Это значение по умолчанию;</li>
+        <li><code>repeat-x</code> &mdash; повторять только по горизонтали;</li>
+        <li><code>repeat-y</code> &mdash; повторять только по вертикали;</li>
+        <li><code>no-repeat</code> &mdash; не повторять.</li>
+    </ul>
+    <h2>Свойство background-position</h2>
+    <p>Свойство <code>background-position</code> управляет расположением фонового изображения. Значение свойства состоит из двух частей, разделенных пробелом: <code>x</code> <code>y</code>.</p>
+    <p><code>x</code> задаёт расположение по горизонтали, а <code>y</code> по вертикали.</p>
+    <p>В качестве значения <code>x</code> можно использовать ключевые слова <code>left</code>, <code>center</code>, <code>right</code>, значения в процентах и в пикселях.</p>
+    <p>В качестве значения <code>y</code> можно использовать ключевые слова <code>top</code>, <code>center</code>, <code>bottom</code>, значения в процентах и в пикселях.</p>
+    <p>Когда фоновое изображение больше блока, то оно обрезается. С помощью свойства <code>background-position</code> можно управлять тем, какая часть изображения будет обрезана. Для этого можно использовать относительные значения (проценты), а иногда абсолютные (пиксели). Можно использовать отрицательные значения, а также комбинировать пиксели и проценты.</p>
+    <h2>Свойство background-attachment</h2>
+    <p>С помощью свойства <code>background-attachment</code> можно зафиксировать фон на месте и он не будет перемещаться при прокручивании окна.</p>
+    <p>Значение свойства:</p>
+    <ul>
+        <li><code>scroll</code> &mdash; фон прокручивается вместе с содержимым. Это значение по умолчанию;</li>
+        <li><code>fixed</code> &mdash; фон не прокручивается, зафиксирован на одном месте.</li>
+    </ul>
+    <h2>Свойство background</h2>
+    <p>Задать фон можно с помощью сокращенного свойства <code>background</code>, в котором через пробел перечисляются его компоненты:</p>
+    <p>background: [bc] [bi] [br] [bp] [ba];</p>
+    <p>Обозначения:</p>
+    <pre>
+<code>[bc] — background-color
+[bi] — background-image
+[br] — background-repeat
+[bp] — background-position
+[ba] — background-attachment</code>
+    </pre>
+</body>
+</html>
