@@ -17,14 +17,10 @@
     <h2>Раскрывающийся список, или «селект»</h2>
     <p>Раскрывающийся список позволяет выбрать один вариант ответа из нескольких. Такой список создаётся с помощью парного тега <code>&lt;select&gt;</code>, у которого есть атрибуты <code>name</code> и <code>id</code>.</p>
     <p>Варианты ответов задаются с помощью парных тегов <code>&lt;option&gt;</code>, которые должны располагаться внутри тега <code>&lt;select&gt;</code>. Например:</p>
-    <pre>
-        <code>
-&lt;select name="theme"&gt;
-    &lt;option value="light"&gt;Светлая тема&lt;/option&gt;
-    &lt;option value="dark"&gt;Тёмная тема&lt;/option&gt;
-&lt;/select&gt;
-        </code>
-    </pre>
+    <pre><code>&lt;select name="theme"&gt;
+&lt;option value="light"&gt;Светлая тема&lt;/option&gt;
+&lt;option value="dark"&gt;Тёмная тема&lt;/option&gt;
+&lt;/select&gt;</code></pre>
     <p>В атрибуте <code>value</code> тега <code>&lt;option&gt;</code> задаётся значение варианта ответа, а внутри этого тега располагается подпись варианта ответа.</p>
     <p>Если при отправке формы у выбранного варианта задан <code>value</code>, то на сервер отправится значение этого атрибута. В противном случае будет отправлен текст подписи.</p>
     <h2>Мультиселект</h2>

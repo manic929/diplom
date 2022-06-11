@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+        <nav class="nav">
+            <ul>
+                <a class="nav-link" href="index.html">Главная</a>
+                <a class="nav-link" href="page-html.html">HTML</a>
+                <a class="nav-link" href="css-page.html">CSS</a>
+            </ul>
+        </nav>
+    </div>
+</div>
+    </header>
+    <div class="container">
+        <div class="contain-online">
+        <div class="stupid-flex">
+    <textarea class="htmleditor_input" id="mycode">
+        
+    </textarea>
+    <div id="htmleditor_result">
+        <iframe class="htmleditor_output" id="display"></iframe>
+        </div> 
+        </div>
+        <div class="button-flex">
+        <input onclick="update();" type="button" value="Показать результат">
+    </div>
+    </div>
+</div>
+<script> 
+    function update() 
+        { 
+          var x = document.getElementById('mycode').value; 
+          document.getElementById("display").contentDocument.body.innerHTML = x;
+        } 
+        </script> 
+</body>
+</html>
