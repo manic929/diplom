@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:peachpuff;
+    background-color: rgb(204, 200, 200);
 }
 a {
     text-decoration: none;
@@ -45,7 +45,7 @@ a {
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: color 0.2s linear;
     position: relative;
@@ -80,7 +80,7 @@ a {
     font-size: 50px;
     text-align: center;
     line-height: 1.5;
-    color: #fff;
+    color: #000;
 }
 .section {
     padding: 80px 0;
