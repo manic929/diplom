@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Оформление текста</h1>
-    <div class="course"><h2>Свойство font-size</h2><p>Управляет размером шрифта. Значение свойства задаёт желаемую высоту символа шрифта. Причём единицы измерения могут быть <a href="/courses/307/run/8">абсолютными или относительными</a>.</p><p>Самая часто используемая единица измерения размера шрифта&nbsp;— пиксели <code>px</code>:</p><pre><code>p {
+  <div class="container-pages">
+    <h1 class="title-pages">Оформление текста</h1>
+    <div class="course"><h2>Свойство font-size</h2><p>Управляет размером шрифта. Значение свойства задаёт желаемую высоту символа шрифта. Причём единицы измерения могут быть абсолютными или относительными.</p><p>Самая часто используемая единица измерения размера шрифта&nbsp;— пиксели <code>px</code>:</p><pre><code>p {
         font-size: 20px;
       }</code></pre><p>Но, чтобы при изменении основного размера шрифта родителя его дочерние элементы пропорционально меняли свои размеры шрифта, есть специальная единица измерения&nbsp;— <code>em</code>.</p><p>Величина <code>1em</code>&nbsp;— это <i>такой же</i> размер шрифта, что и&nbsp;у&nbsp;родителя. Соответственно, если нужно, чтобы шрифт дочернего элемента был всегда в&nbsp;2 раза больше родительского, то&nbsp;надо задать значение <code>2em</code>:</p><pre><code>h1 {
         font-size: 2em;
@@ -77,5 +79,6 @@
       }</code></pre><p>Свойство <code>text-decoration</code>&nbsp;— <a href="/courses/307/run/7">составное</a>. Оно раскладывается на&nbsp;отдельные свойства:</p><ul><li><code>text-decoration-line</code>&nbsp;— вид линии: зачёркивание, подчёркивание или надчёркивание;</li><li><code>text-decoration-style</code>&nbsp;— стиль линии, может принимать значения:
           <ul><li><code>solid</code>&nbsp;— сплошная линия;</li><li><code>double</code>&nbsp;— двойная линия;</li><li><code>dotted</code>&nbsp;— точечная линия;</li><li><code>dashed</code>&nbsp;— пунктирная линия;</li><li><code>wavy</code>&nbsp;— волнистая линия.</li></ul></li><li><code>text-decoration-color</code>&nbsp;— цвет линии.</li></ul><h2>Свойство font-style</h2><p>Свойством можно задать начертание текста. Его основные значения:</p><ol><li><code>normal</code>&nbsp;—&nbsp;обычное начертание;</li><li><code>italic</code>&nbsp;—&nbsp;курсивное начертание;</li><li><code>oblique</code>&nbsp;—&nbsp;наклонное начертание.</li></ol><p>Если задано значение <code>italic</code>, браузер будет пытаться найти в&nbsp;заданном шрифте отдельное курсивное начертание символов. В&nbsp;некоторых шрифтах отдельный курсив предусмотрен.</p><p>Если отдельного курсивного начертания в&nbsp;шрифте не&nbsp;предусмотрено, то&nbsp;браузер сделает текст наклонным, то&nbsp;есть сымитирует курсив. Что равноценно заданию тексту значения <code>font-style: oblique</code>.</p><h2>Свойство text-transform</h2><p>С&nbsp;его помощью можно управлять регистром символов: делать буквы строчными (маленькими) или заглавными (большими). Значения свойства:</p><ol><li><code>lowercase</code>&nbsp;—&nbsp;все строчные;</li><li><code>uppercase</code>&nbsp;—&nbsp;все заглавные;</li><li><code>capitalize</code>&nbsp;—&nbsp;каждое слово начинается с&nbsp;большой буквы;</li><li><code>none</code>&nbsp;—&nbsp;отменяет изменение регистра.</li></ol><h2>Отступы</h2><p>Важный фактор того, что текст в&nbsp;блоке будет удобочитаемым, это наличие свободного пространства в&nbsp;блоке для этого текста. Вокруг текста должно быть достаточно «воздуха», он&nbsp;не&nbsp;должен «прилипать» к&nbsp;краям, ему не&nbsp;должно быть «тесно».</p><p>За&nbsp;отступы в&nbsp;CSS отвечают два свойства: <code>padding</code> задаёт внутренние отступы в&nbsp;блоке, а&nbsp;<code>margin</code> задаёт внешние отступы.</p>
                   </div>
+</div>
 </body>
 </html>

@@ -16,26 +16,41 @@
                 <a class="nav-link" href="index.html">Главная</a>
                 <a class="nav-link" href="page-html.html">HTML</a>
                 <a class="nav-link" href="css-page.html">CSS</a>
+                <a class="nav-link" href="#">Онлайн-редактор</a>
             </ul>
         </nav>
     </div>
 </div>
     </header>
+    <main>
+        <h1 class="h1-title">Онлайн-редактор</h1>
     <div class="container">
         <div class="contain-online">
-        <div class="stupid-flex">
+        <div class="online-flex">
     <textarea class="htmleditor_input" id="mycode">
-        
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
     </textarea>
     <div id="htmleditor_result">
         <iframe class="htmleditor_output" id="display"></iframe>
         </div> 
         </div>
         <div class="button-flex">
-        <input onclick="update();" type="button" value="Показать результат">
+        <input onclick="update();" class="glow-button" type="button" value="Показать результат">
     </div>
     </div>
 </div>
+</main>
 <script> 
     function update() 
         { 

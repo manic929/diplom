@@ -1,15 +1,49 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(/fonts/Roboto/Roboto-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Source Sans Pro', sans-serif;
+    src: url(/fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
 body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(204, 200, 200);
+    background-color:#d7d7d97a;
+}
+.title-pages {
+    text-align: center;
+}
+.back {
+    background-color: #F2F2F2;
 }
 a {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.list-pages {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+}
+.list-pages a {
+    color: #0D0D0D;
+}
+.list-pages a:hover {
+    border-bottom: 3px solid #0D0D0D;
+    color:#000000;
 }
 .container {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%; /* 70% поставить */
+    width: 1170px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -25,12 +59,14 @@ a {
 }
 
 .header {
-    padding-top: 30px;
+    padding-top: 15px;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    background-color: #0D0D0D;
+    padding-bottom: 15px;
 }
 .header-inner {
     display: flex;
@@ -45,7 +81,7 @@ a {
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
-    color: #000;
+    color: #706f6f;
     text-decoration: none;
     transition: color 0.2s linear;
     position: relative;
@@ -55,36 +91,38 @@ a {
     display: none;
     width: 100%;
     height: 3px;
-    background-color: #e08308;
+    background-color: #F2F2F2;
     position: absolute;
 }
 .nav-link:hover:after {
     display: block;
 }
 .nav-link:hover {
-    color: #e08308
+    color: #F2F2F2;
 }
 .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 75px;
     width: 100%;
-    height: 100vh;
+    background-color: #F2F2F2;
 }
 .intro-inner {
     width: 100%;
     max-width: 880px;
+    height: 550px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .intro-title {
     font-size: 50px;
-    text-align: center;
-    line-height: 1.5;
-    color: #000;
+    color: #4F5459;
 }
 .section {
     padding: 80px 0;
 }
+
 .about-title {
     width: 100%;
     max-width: 950px;
@@ -92,15 +130,17 @@ a {
     margin-bottom: 40px;
     text-align: center;
 }
+.about-text {
+    padding-bottom: 30px;
+    border-bottom: 4px solid #cacaca;
+}
+.skills {
+    margin-top: 80px;
+}
 .section-title {
     font-size: 30px;
     font-weight: 700;
-    color:#ffffff
-}
-.about-text {
-    margin: 0 auto;
-    width: 1000px;
-    font-size: 26px;
+    color:#0D0D0D;
 }
 /* footer */
 .footer {
@@ -161,7 +201,7 @@ pre code {
 pre {
     display: block;
 }
-.course pre {
+pre {
     background-color: #fff;
     width: calc(50% + 90px);
     margin-left: -15px;
@@ -169,7 +209,8 @@ pre {
     margin-bottom: 20px;
     padding: 15px;
     line-height: 1.6;
-    border: 0;
+    border-radius: 5px;
+    border: 1px solid #4F5459;
 }
 /* button */
 .example button:hover {
@@ -202,10 +243,10 @@ resize: none;
   width:800px; 
   border:solid #c3c3c3 1px; 
 } 
-.stupid-flex {
-margin-top: 80px;
+.online-flex {
 display: flex;
 justify-content: space-between;
+margin-top: 30px;
 }
 .htmleditor_headerText 
 { 
@@ -222,7 +263,6 @@ padding-bottom: 7px;
   width:50%; 
   float: left; 
 } 
- 
 #htmleditor_result 
 { 
   padding-right: 7px; 
@@ -234,3 +274,90 @@ padding-bottom: 7px;
     display: flex;
     justify-content: center;
 }
+.h1-title {
+    margin-top: 100px;
+    text-align: center;
+}
+.contain-online {
+    padding-top: 0;
+}
+.grid-container {
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 4px solid #cacaca;
+    padding-bottom: 30px;
+}
+.grid-container img{
+    height: 180px;
+    width: 180px;
+}
+/* список */
+.rectangle {
+    counter-reset: li; 
+    list-style: none; 
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+    .rectangle a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    margin: .5em 0 .5em 2.5em;
+    background: #D3D4DA;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    }
+    .rectangle a:hover {background: #DCDDE1;}       
+    .rectangle a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #9097A2;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    }
+    .rectangle a:after {
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+    }
+    .rectangle a:hover:after {
+    left: -.5em;
+    border-left-color: #9097A2;
+    }
+    .glow-button {
+text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #2A3159;
+  background: rgba(255, 255, 255, 1);
+  transition: color .3s, background .5s;
+      }
+      .glow-button:hover {
+        box-shadow: 0 0 10px 0 #4F5B73 inset, 0 0 10px 4px#4F5B73;
+        color: #4F5B73;
+      }
